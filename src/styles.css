@@ -1,9 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 .App {
-  font-family: sans-serif;
+  font-family: "Dancing Script", cursive;
   text-align: center;
+  --primary-color: lightblue;
+}
+
+body {
+  margin: 0px;
 }
 
 input {
+  box-sizing: border-box;
+  margin-top: 1rem;
+  margin-left: 2rem;
   padding: 1rem;
-  width: 80%;
+  width: 20%;
+}
+
+nav {
+  text-align: center;
+  display: box-sizing;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+}
+
+h2 {
+  margin-left: 1.5rem;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+footer p {
+  max-width: 600px;
+  text-align: justify;
+  margin: auto;
 }

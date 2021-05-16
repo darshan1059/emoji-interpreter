@@ -38,9 +38,13 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1>Inside out</h1>
+      <nav>
+        <h1>Emoji Interpreter</h1>
+      </nav>
+
+      <h2> Put your emoji below 👇</h2>
       <input onChange={emojiInputHandler}></input>
-      <h2> {meaning} </h2>
+      <h2> Meaning 👉 {meaning} </h2>
 
       <h3> Emojis we know </h3>
       {emojisWeKnow.map((emoji) => {
@@ -48,7 +52,12 @@ export default function App() {
           <span
             onClick={() => emojiClickHandler(emoji)}
             //if you want to pass something from the list
-            style={{ fontSize: "2rem", padding: "0.5rem", cursor: "pointer" }}
+            style={{
+              fontSize: "2rem",
+              padding: "0.5rem",
+              marginLeft: "2rem",
+              cursor: "pointer"
+            }}
             key={emoji}
           >
             {" "}
@@ -56,6 +65,15 @@ export default function App() {
           </span>
         );
       })}
+
+      <footer>
+        <div style={{ fontSize: "x-large", padding: "1rem" }}>About</div>
+        <p>
+          Do you know the meaning of every emoji that you use in day to day
+          life? Checkout the meaning of commonly used emoji with the help of
+          emoji interpreter..!!
+        </p>
+      </footer>
     </div>
   );
 }
